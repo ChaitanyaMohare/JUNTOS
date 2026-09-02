@@ -1,9 +1,9 @@
 import httpStatus from "http-status";
-import { User } from "../models/user.model.js";
+import { User } from "../models/userModel.js";
 import bcrypt, { hash } from "bcrypt"
 
 import crypto from "crypto"
-import { Meeting } from "../models/meeting.model.js";
+import { Meeting } from "../models/meetingModel.js";
 
 const login = async (req, res) => {
 
@@ -65,3 +65,5 @@ const register = async (req, res) => {
     }
 
 }
+
+export {login , register};

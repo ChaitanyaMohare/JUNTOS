@@ -11,7 +11,15 @@ export const connectToSocket = (server) =>{
         socket.on("join-call",(path) =>{
 
         })
-        socket.on("signal")
+        socket.on("signal",(told,message) => {
+            io.to(told).emit("signal",socket.id,message);
+        })
+        socket.on("chat-message",(data,sender)=>{
+
+        })
+        socket.on("dissconnect",()=>{
+            
+        })
     })
     return io;
 } 

@@ -78,7 +78,7 @@ export const connectToSocket = (server) => {
             }
 
         })
-mkdir 
+
         socket.on("disconnect", () => {
 
             var diffTime = Math.abs(timeOnline[socket.id] - new Date())
